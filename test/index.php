@@ -7,11 +7,12 @@ require __DIR__ . '/../lib_ext/autoload.php';
 use Notification\Email;
 
 // Instanciando a Classe "Email"
-$novoEmail = new Email(2, 'smtp.live.com', 'aguaduarte@hotmail.com', 'numsey99', 'tls', '587', 'aguaduarte@hotmail.com', 'MD_fc');
+$email = new Email(2, "mail.host.com", "your@email.com", "your-pass", "smtp secure (tls / ssl)", "port (587)", "from@email.com", "From Name");
 // Chamar o Método
-$novoEmail->sendMail("Assunto de Teste", "<p>Esse é um E-mail de <b>TESTE</b>!!!</p", "aguaduarte@hotmail.com", "Marco Antonio", "maadgarca@gmail.com", "Marco");
+$email-> sendEmail("Subject", "Content", "reply@email.com", "Replay Name", "address@email.com", "Address Name");
 
 var_dump($novoEmail);
         
         
-        
+
+
